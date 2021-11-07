@@ -26,6 +26,10 @@ browsers:
   args:
   - -new-tab
 bookmarks:
+- title: Example Domain
+  url: https://example.com
+  tags:
+  - test
 - title: go-bookmark
   url: https://github.com/kenju/go-bookmark
   tags:
