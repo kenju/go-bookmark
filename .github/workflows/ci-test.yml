@@ -1,0 +1,18 @@
+name: ci-test
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: set up go
+      uses: actions/setup-go@v2
+      with:
+        go-version: '1.17.3'
+    - name: set up module
+      run: go mod tidy
+    - name: build
+      run: go build .
+    - name: test
+      run: go test -v ./...
